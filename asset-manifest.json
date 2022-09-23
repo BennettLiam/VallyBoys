@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/VallyBoys/static/css/main.61c66f08.css",
-    "main.js": "/VallyBoys/static/js/main.5d8acefd.js",
+    "main.js": "/VallyBoys/static/js/main.2ad8f1bb.js",
     "index.html": "/VallyBoys/index.html",
     "main.61c66f08.css.map": "/VallyBoys/static/css/main.61c66f08.css.map",
-    "main.5d8acefd.js.map": "/VallyBoys/static/js/main.5d8acefd.js.map"
+    "main.2ad8f1bb.js.map": "/VallyBoys/static/js/main.2ad8f1bb.js.map"
   },
   "entrypoints": [
     "static/css/main.61c66f08.css",
-    "static/js/main.5d8acefd.js"
+    "static/js/main.2ad8f1bb.js"
   ]
 }
