@@ -1,16 +1,17 @@
 import React from "react"
+import { Navbar, Container, Nav } from "react-bootstrap"
 
 export default function Header( {text} ){
     return (
-        <>
-        <head>
-            <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
-            <link rel="stylesheet" href="style.css"></link>
-        </head>
-        <h1>
-            {text}
-        </h1>
-        <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
-        </>
+        <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">Vally Boys</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/Sprays">Sprays</Nav.Link>
+            <Nav.Link href="/PlayerCards">Player Cards</Nav.Link>
+            <Nav.Link href="/About">About</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     )
 }

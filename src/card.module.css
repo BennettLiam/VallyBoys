@@ -1,4 +1,4 @@
-.bigblue {
+.column {
     color: White;
     padding: 40px;
     font-family: Sans-Serif;
@@ -6,5 +6,9 @@
     background-color: darkslategray;
     border: 1px solid black;
     border-radius: 10px;
+  }
+
+  .image{
+    max-width:128px;
   }
   
