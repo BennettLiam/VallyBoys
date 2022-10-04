@@ -45,6 +45,11 @@ export default function MariosPage() {
     var embeddedUrl = "https://www.youtube.com/embed/"+res[1];
     return embeddedUrl;
   }
+  function youtuConvert(str) {
+    var res = str.split("/");
+    var embeddedUrl = "https://www.youtube.com/embed/"+res[res.length-1];
+    return embeddedUrl;
+  }
   function twitchConvert(str) {
     var res = str.split("/");
     var embeddedUrl = "https://player.twitch.tv/?video="+res[res.length-1]+"&parent=www.bennettliam.github.io";
@@ -66,6 +71,7 @@ export default function MariosPage() {
         const weblink = mario.run.weblink
         var videoLink = mario.run.videos.links['0'].uri;
         if(videoLink.includes('youtube')) videoLink=youtubeConvert(videoLink);
+        else if(videoLink.includes('youtu')) videoLink=youtuConvert(videoLink);
         if(videoLink.includes('twitch')) videoLink=twitchConvert(videoLink);
         setMarios(prevMarios => {
           return [...prevMarios, { 
