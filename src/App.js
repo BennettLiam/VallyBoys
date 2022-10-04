@@ -2,24 +2,27 @@ import Header from "./Header"
 import SpraysPage from "./Pages/SpraysPage"
 import PlayerCardsPage from "./Pages/PlayerCardsPage"
 import AboutPage from "./Pages/AboutPage"
+import VallyBoysPage from "./Pages/VallyBoysPage"
+import MarioPage from "./Pages/MarioPage"
+import { Route, Routes } from "react-router-dom"
 
 function App() {
 
-  let Component
-  console.log(window.location.pathname)
-  switch (window.location.pathname) {
-    case "/PlayerCards":
-      Component = PlayerCardsPage
-      break
-    case "/Sprays":
-      Component = SpraysPage
-      break
-    case "/About":
-      Component = AboutPage
-      break
-      default:
-        Component = PlayerCardsPage
-  }
+  // let Component
+  // console.log(window.location.pathname)
+  // switch (window.location.pathname) {
+  //   case "/VallyBoys/PlayerCards":
+  //     Component = PlayerCardsPage
+  //     break
+  //   case "/VallyBoys/Sprays":
+  //     Component = SpraysPage
+  //     break
+  //   case "/VallyBoys/About":
+  //     Component = AboutPage
+  //     break
+  //     default:
+  //       Component = PlayerCardsPage
+  // }
 
   //Retrieve cards on refresh
   // useEffect(() => {
@@ -62,7 +65,13 @@ function App() {
 
     <>
     <Header text={"Valorant Cards"} />
-      <Component />
+      <Routes>
+        <Route path="/VallyBoys" element={<VallyBoysPage />} />
+        <Route path="/VallyBoys/About" element={<AboutPage />} />
+        <Route path="/VallyBoys/PlayerCards" element={<PlayerCardsPage />} /> 
+        <Route path="/VallyBoys/Sprays" element={<SpraysPage />} />  
+        <Route path="/VallyBoys/Mario" element={<MarioPage />} />  
+      </Routes>
     </>
   )
 }
